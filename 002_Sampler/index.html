@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>MPC60 Web Sampler</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/wavesurfer.js"></script> <!-- WaveSurfer eingebunden -->
+  <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.regions.min.js"></script>
+
+</head>
+<body>
+  <h1>MPC60 Sampler (Web)</h1>
+
+  <div id="song-select">
+    <button onclick="loadPredefinedSong('song1.mp3')">Song 1</button>
+    <button onclick="loadPredefinedSong('song2.mp3')">Song 2</button>
+    <button onclick="loadPredefinedSong('song3.mp3')">Song 3</button>
+  </div>
+
+<!-- Entferne das alte Audio-Element -->
+<!-- <audio id="audio" controls></audio> -->
+
+<!-- Wellenformanzeige -->
+<div id="waveform" style="margin-top: 20px;"></div>
+<button onclick="waveSurfer.playPause()">Play/Pause</button>
+
+
+
+  <div id="cut-controls">
+    <button onclick="setStart()">Set Start</button>
+    <button onclick="setEnd()">Set End</button>
+    <button onclick="cutSample()">Cut</button>
+  </div>
+
+  <h2>Samples</h2>
+  <div id="samples-box">
+    <div id="samples"></div>
+  </div>
+
+  <h2>Timeline (Arrangement)</h2>
+  <div id="timeline">
+    <div id="playhead" style="position:absolute; top:0; left:0; width:2px; height:100%; background:red; z-index:10;"></div>
+    <div class="timeline-row" ondragover="event.preventDefault()" ondrop="dropSample(event)"></div>
+    <div class="timeline-row" ondragover="event.preventDefault()" ondrop="dropSample(event)"></div>
+    <div class="timeline-row" ondragover="event.preventDefault()" ondrop="dropSample(event)"></div>
+  </div>
+  
+<button class="play-timeline" onclick="playTimeline()">Play/Pause</button>
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
