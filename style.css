@@ -1,0 +1,68 @@
+
+
+body{
+    background-color: rgb(22, 68, 55);
+    margin: 0;
+    padding: 0; 
+}
+
+.Titel{
+    font-family: "Karantina", system-ui;
+  font-weight: 100;
+  color: rgb(10, 50, 39);
+  line-height: 0.72;
+  background: url("rough-texture.png");
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+/* Misch Titel */
+
+.Mixen{
+position: relative;
+height: 115vh;
+width: 100vw;
+margin: 0;
+padding: 0;
+}
+
+.Misch{
+    position: absolute;
+    top: 5vh;
+    right: 0px;
+    font-size: 90vh;
+}
+
+.Sample{
+    position: absolute;
+    font-size: 60vh;
+    right: 15vw;
+    top:60vh;
+
+}
+
+.MischBild1{
+    position: absolute;
+    right: 0px;
+    width: 55vw;
+    overflow: hidden;
+    aspect-ratio: 3 / 2;
+}
+
+.MischBild2{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 55vw;
+    overflow: hidden;
+    aspect-ratio: 3 / 2;
+}
+
+.MischBild1 img, .MischBild2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
