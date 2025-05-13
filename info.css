@@ -1,0 +1,76 @@
+
+body{
+    background-color: rgb(25, 81, 65);
+    margin: 0;
+    padding: 0; 
+}
+
+.InfoTitel{
+    font-family: "Karantina", system-ui;
+  font-weight: 100;
+  color: rgb(9, 58, 44);
+  line-height: 0.72;
+  position: relative;
+  height: 115vh;
+}
+
+.WHO{
+    position: absolute;
+    top: -5vh;
+    right: 10vw;
+    font-size: 110vh;
+}
+
+.ISHE{
+    position: absolute;
+    font-size: 85vh;
+    left: 8vw;
+    top:65vh;
+
+}
+
+.InfoBild1{
+    position: absolute;
+    right: 0px;
+    top: -2px;
+    width: 55vw;
+    overflow: hidden;
+    aspect-ratio: 3 / 2;
+}
+
+.InfoBild2{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 55vw;
+    overflow: hidden;
+    aspect-ratio: 3 / 2;
+}
+
+.InfoBild1 img, .InfoBild2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.Streiffen{
+    position: absolute;
+    height: 120%;;
+    top: -5px;
+    background-color: rgb(25, 81, 65);
+
+}
+
+.schmal{width: 18px;}
+.mittel{width: 35px;}
+.dick{width: 40px;}
+.extradick{width: 100px;}
+
+.S1{ left: 4vw;}
+.S2{ left: 6vw;}
+.S3{ left: 22vw}
+.S4{ left: 50vw;}
+.S5{ right: calc(24vw + 55px);}
+.S6{ right: 24vw;}
+.S7{ right: calc(100px + 1vw);}
+.S8{ right: 0px}
