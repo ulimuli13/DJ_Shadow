@@ -1,4 +1,5 @@
 
+
 body{
     background-color: rgb(25, 81, 65);
     margin: 0;
@@ -7,8 +8,17 @@ body{
     font-weight: 100;
     color: rgb(9, 58, 44);
     line-height: 0.72;
-    position: relative;
     height: 100vh;
+    width: 120vw;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+.layout{
+    position: relative;
+    width: 100vw;
 }
 
 .SOUND{
@@ -94,3 +104,50 @@ body{
 .S6{ right: 48vw;}
 .S7{ right: calc(100px + 1vw);}
 .S8{ right: 0px}
+
+
+
+/*Navigation*/
+
+.navigation{
+    border: 1px solid red;
+    height: 100vh;
+    width: 20vw;
+}
+.thema{
+    color: rgb(209, 188, 150);
+    font-size: 100px;
+}
+
+.samplin:hover .thema {
+    color: rgb(9, 58, 44);
+  }
+  
+  .samplin:hover .pfeil_aussehen {
+    stroke: rgb(9, 58, 44);
+  }
+
+.samplin{
+    border: 1px solid red;
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.samplin .Pfeil svg{
+    rotate: 90deg;
+    height: 70px;
+}
+
+.about .Pfeil{
+    rotate: 180deg;
+
+}
+
+  
+  .pfeil_aussehen {
+    fill: none;
+    stroke: #d1bc96;
+    stroke-miterlimit: 10;
+    stroke-width: 20px;
+  }

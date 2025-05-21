@@ -1,65 +1,171 @@
-body{
-    background-color: rgb(9, 58, 44);
-    margin: 0;
+
+
+body {
+  background-color: rgb(25, 81, 65);
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+  font-family: "Karantina", system-ui;
+  font-weight: 100;
+
 }
+
 .container {
-    display: grid;
-    grid-template-columns: 83% 15% 2%;
-    grid-template-rows: 100%; 
-    height: 100vh;
-  }
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  
+}
 
-  .left {
-    display: grid;
-    grid-template-rows: 25% 75%;
-  }
+/* durchblättern */
+.originale {
+  position: absolute;
+  top: 0px;
+  left: 50px;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: calc(100vh + 360px); /* Feste Breite */
+  overflow: hidden;
+}
 
-  .top-left {
-    background-color: #a8dadc;
-  }
+.schallplatten {
+  position: relative;
+  height: 100vh;
+  width: 20px;
+  transition: width 0.6s ease;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
 
-  .bottom-left {
-    background-color: #457b9d;
-  }
+.schallplatten img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: none;
+}
 
-  .right {
-    background-color: #e63946;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    height: 100%;
-  }
+.schallplatten .default-img {
+  display: block;
+}
 
-  .chosenhinten{
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    height: 100%;
-    overflow: hidden;
-  }
+.schallplatten.selected {
+  width: 100vh;
+}
 
-  .chosen{
-    background-color: white;
-    width: 100%;             /* oder 100px */
+.schallplatten.selected .default-img {
+  display: none;
+}
 
-  }
+.schallplatten.selected .selected-img {
+  display: block;
+}
 
-  .chosen img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 
-  .erster{
-    background-color: rgb(233, 136, 136);
-    width: 100%;             /* oder 100px */
-    aspect-ratio: 1 / 1;
-  }
+/* Ausgewählt */
 
-  .erster img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.selected{
+  display: flex;
+  justify-content: center;
+}
 
-  .seitewechseln{
-background-color: black;
-  }
+.button_wählen{
+  position: absolute;
+bottom:25px;
+padding-left: 10px;
+padding-right: 10px;
+  color: black;
+  background-color: white;
+  border-radius: 2px;
+  font-size: 50px;
+  z-index: 3;
+  display: none;
+}
+
+.selected .button_wählen{
+  display: block;
+}
+
+.button_wählen:hover{
+  font-size: 55px;
+}
+
+
+.ausgewählt{
+  background-color: aqua;
+  height: 100vh;
+  width: calc(100vw - 100vh - 320px - 140px);
+  position: absolute;
+  right: 70px;
+}
+
+.cover_auswahl{
+  height: calc(100vh / 5);
+}
+
+.A1{background-color: bisque;}
+.A2{background-color: blueviolet;}
+.A3{background-color: brown;}
+.A4{background-color: chartreuse;}
+
+
+
+/* Navigation */
+
+.seitewechseln {
+  background-color: rgb(12, 57, 45);
+  height: 100vh;
+  width: 70px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+.seite_rechts{
+  right: 0px;
+}
+
+.seite_rechts .Pfeil{
+  transform: rotate(90deg);
+  height: 40px;
+  width: auto;
+  position: absolute;
+  left: -3px;
+}
+
+.Pfeil svg{
+  height: 100%;
+  width: auto;
+}
+
+.pfeil_aussehen {
+  fill: none;
+  stroke: #d1bc96;
+  stroke-miterlimit: 10;
+  stroke-width: 20px;
+}
+
+.seite_links{
+  left: 0px;
+}
+
+.seite_links .Pfeil{
+  transform: rotate(270deg);
+  height: 40px;
+  width: auto;
+  position: absolute;
+  right: -3px;
+}
+
+.seitewechseln:hover{
+  background-color: rgb(10, 45, 35);
+}
+
+.seitewechseln:hover .pfeil_aussehen{
+  stroke: #e4deb1;
+}
+
+.seitewechseln:hover .Pfeil{
+  height: 43px;
+}
