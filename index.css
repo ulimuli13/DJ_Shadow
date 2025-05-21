@@ -117,11 +117,13 @@ body{
 .thema{
     color: rgb(209, 188, 150);
     font-size: 100px;
+
 }
 
-.samplin:hover .thema {
-    color: rgb(9, 58, 44);
-  }
+.leer1 {
+    height:600px;
+}
+
   
   .samplin:hover .pfeil_aussehen {
     stroke: rgb(9, 58, 44);
@@ -138,13 +140,31 @@ gap: 20px;
     rotate: 90deg;
     height: 70px;
 }
+.samplin:hover{
+        color: rgb(9, 58, 44);
+}
+.leer {
+    height: 400px;
+}
 
-.about .Pfeil{
-    rotate: 180deg;
+.about{    border: 1px solid rgb(60, 0, 255);
+display: flex;
+align-items: center;
+gap: px;
 
 }
 
+.about .Pfeil{
+    rotate: 180deg;
+    width: 120px;
+}
+.about:hover .thema {
+    color: rgb(9, 58, 44);
+  }
   
+  .about:hover .pfeil_aussehen {
+    color: rgb(9, 58, 44);
+  }
   .pfeil_aussehen {
     fill: none;
     stroke: #d1bc96;

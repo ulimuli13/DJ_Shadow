@@ -3,32 +3,29 @@ body{
     background-color: rgb(25, 81, 65);
     margin: 0;
     padding: 0; 
-    font-family: "Karantina", system-ui;
-    font-weight: 100;
     overflow: hidden;
 }
 
 /*Playbereich*/
 .musik_player{
 background-color: rgb(9, 58, 44);
-height: 60px;
+height: 100px;
 width: 100vw;
 }
 
 /*Schallplatten*/
-.inhalt{
-    position: absolute;
-    top: 0px;
-    left: 0px;
 
-}
 .titel{
+    font-family: "Karantina", system-ui;
     font-size: 60px;
+    font-weight: 100;
     color: rgb(209, 188, 150);
 }
 
 .text{
-    font-size: 30px;
+    font-family: "Bebas Neue", system-ui;
+    font-size: 25px;
+    font-weight: 100;
     color: rgb(209, 188, 150);
 }
 
@@ -68,25 +65,30 @@ width: 100vw;
     }
 
     .inhalt{
-position: absolute;
-top: 130px;
-left: 90px;
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    text-align: center;
+
     }
 
     .sticker{
         position: absolute;
-        height: 130px;
+        height: 300px;
         width: auto;
-        top: 280px;
-        opacity: 0.7;
-        rotate: 150deg;
-        left: 220px;
+        top: 500px;
+        opacity: 0.5;
+        rotate: -40deg;
+        left:450px;
+           z-index: 0;
+        
 
     }
 
     .sticker img{
         height: 100%;
         width: auto;
+    
     }
 
     /*Animation der platten */
