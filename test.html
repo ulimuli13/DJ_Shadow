@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.vinyl-cover {
+  display: flex;
+  overflow-x: auto;
+  width: max-content; /* Breite = so breit wie der Inhalt */
+  flex-shrink: 0;     /* Nicht schrumpfen, immer Platz für Inhalt lassen */
+  background: #eee;
+  padding: 20px;
+}
+
+.vinyl-item {
+  width: 300px;
+  height: 300px;
+  margin-right: 20px;
+  border-radius: 50%;
+  background-color: grey;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.ausgewählt {
+  flex: 1; /* Nimmt den restlichen Platz ein */
+  padding: 20px;
+  background: #ddd;
+  overflow: auto; /* Falls Text zu lang wird */
+}
+
+    </style>
+    <div class="wrapper">
+        <div class="vinyl-cover">
+          <div class="vinyl-item">1</div>
+          <div class="vinyl-item">2</div>
+          <!-- weitere Platten -->
+        </div>
+        <div class="ausgewählt">
+          <p>Aktuell ausgewählt: <span id="current"></span></p>
+        </div>
+      </div>
+      
+</body>
+</html>

@@ -1,0 +1,143 @@
+
+:root {
+  --transition-speed: .75s;
+  --spine-width: 20px;
+  --album-width: 100vh;
+  --album-height: 100vh;
+}
+
+body {
+  background-color: rgb(25, 81, 65);
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+  font-family: "Karantina", system-ui;
+  font-weight: 100;
+
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  
+}
+
+/* durchblättern */
+.vinyl-container {
+  display: flex;
+  height: var(--album-height);
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  height: 100vh;
+}
+
+.vinyl-item {
+  display: flex;
+  overflow: hidden;
+  transition: width var(--transition-speed) ease-in-out;
+  cursor: pointer;
+}
+
+.vinyl-spine {
+  min-width: var(--spine-width);
+  height: 100%;
+  object-fit: cover;
+}
+
+.vinyl-cover {
+  width: var(--spine-width);
+  height: 100%;
+  object-fit: cover;
+  transition: width var(--transition-speed) ease-in-out;
+}
+
+.vinyl-item.active {
+  width: var(--album-width);
+}
+
+.vinyl-item:not(.active) {
+  width: var(--spine-width);
+}
+
+.vinyl-item.active .vinyl-cover {
+  width: calc(var(--album-width) );
+}
+
+/* Optional hover effect */
+.vinyl-item:not(.active):hover {
+  opacity: 0.8;
+  /* width: calc(var(--spine-width) + 2px); */
+}
+
+
+/* Ausgewählt */
+
+.ausgewählt{
+
+}
+
+.Plattenspieler{
+  height: calc(100vh / 5);
+  position:absolute;
+  right: 0px;
+  border: 1px solid red;
+
+}
+
+.Platte_on{
+  display: none;
+}
+
+.Platte_off{
+  display: none;
+}
+
+/* Navigation */
+
+.seitewechseln {
+  background-color: rgb(12, 57, 45);
+  height: 100vh;
+  width: 70px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+
+.Pfeil svg{
+  height: 100%;
+  width: auto;
+}
+
+.pfeil_aussehen {
+  fill: none;
+  stroke: #d1bc96;
+  stroke-miterlimit: 10;
+  stroke-width: 20px;
+}
+
+.seite_links{
+  left: 0px;
+}
+
+.seite_links .Pfeil{
+  transform: rotate(270deg);
+  height: 40px;
+  width: auto;
+  position: absolute;
+  right: -3px;
+}
+
+.seitewechseln:hover{
+  background-color: rgb(10, 45, 35);
+}
+
+.seitewechseln:hover .pfeil_aussehen{
+  stroke: #e4deb1;
+}
+
+.seitewechseln:hover .Pfeil{
+  height: 43px;
+}
