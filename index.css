@@ -132,16 +132,13 @@ a:active {
   left: 100vw;
   bottom: 50vh;
   display: flex;
+  text-decoration: none;
   align-items: center;
-  background-color: rgba(209, 188, 150, 0);
-  color: rgb(25, 81, 65);
+  color: rgb(9, 58, 44);
   font-size: 100px;
     font-family: "Karantina", system-ui;
     font-weight: 100;
-  text-decoration: none;
-  border-radius: 20px;
   gap: 50px;
-  transition: background-color 0.3s ease;
   z-index: 10;
 }
 
@@ -167,15 +164,12 @@ a:active {
   display: flex;
     flex-direction: column; /* ← Das ist neu! */
   align-items: center;
-  background-color: rgba(209, 188, 150, 0);
-  color: rgb(25, 81, 65);
+  color: rgb(9, 58, 44);
   font-size: 100px;
     font-family: "Karantina", system-ui;
     font-weight: 100;
   text-decoration: none;
-  border-radius: 20px;
   gap: 5px;
-  transition: background-color 0.3s ease;
   z-index: 10;
 }
 
