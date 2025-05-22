@@ -8,13 +8,22 @@
     <link rel="stylesheet" href="info.css">
 </head>
 <body>
+<a href="index.html" class="back-button">
+  <span class="arrow">›</span>
+</a>
+
+
+<div class="playmusic">SOUND ON</div>
 
 <div class="musik_player">
-                <div class="Pfeil">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 346.39 183.37">
-                   <polyline class="pfeil_aussehen" points="7.72 159.19 172.7 18.6 338.74 159.19"/>
-             </svg>
+  <button id="prev-button" class="player-button">⏮</button>
+  <button id="play-pause-button" class="player-button">▶︎</button>
+  <button id="next-button" class="player-button">⏭</button>
+  <audio id="audio-player" src="audio/song1.mp3"></audio>
 </div>
+
+
+
 
 <div class="info_platte joshua_paul">
     <div class="schallplatte"><img src="Bilder/schallplatte-gün.png"></div>
@@ -45,6 +54,68 @@
 <div class="Bild_rechts"><img src="Bilder/DJ_Shadow farbig.jpg"></div>
 <div class="Bild_unten_links"><img src="Bilder/enterducing.jpg"></div>
     <div class="sticker"><img src="Bilder/copyright.png"></div>
+
+<script>
+  const audioPlayer = document.getElementById('audio-player');
+  const playPauseButton = document.getElementById('play-pause-button');
+  const nextButton = document.getElementById('next-button');
+  const prevButton = document.getElementById('prev-button');
+
+  const tracks = [
+    'audio/song1.mp3',
+    'audio/song2.mp3',
+    'audio/song3.mp3',
+    'audio/song4.mp3',
+    'audio/song5.mp3',
+    'audio/song6.mp3',
+    'audio/song7.mp3',
+    'audio/song8.mp3',
+    'audio/song9.mp3',
+    'audio/song10.mp3',
+    'audio/song11.mp3',
+    'audio/song12.mp3',
+    'audio/song13.mp3',
+    'audio/song14.mp3',
+    'audio/song15.mp3'
+  ];
+
+  let currentTrack = 0;
+  let isPlaying = false;
+
+  function loadTrack(index) {
+    audioPlayer.src = tracks[index];
+    if (isPlaying) audioPlayer.play();
+  }
+
+  playPauseButton.addEventListener('click', () => {
+    if (isPlaying) {
+      audioPlayer.pause();
+      playPauseButton.textContent = '▶︎';
+    } else {
+      audioPlayer.play();
+      playPauseButton.textContent = '❚❚';
+    }
+    isPlaying = !isPlaying;
+  });
+
+  nextButton.addEventListener('click', () => {
+    currentTrack = (currentTrack + 1) % tracks.length;
+    loadTrack(currentTrack);
+  });
+
+  prevButton.addEventListener('click', () => {
+    currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
+    loadTrack(currentTrack);
+  });
+
+  // Autoplay beim Laden
+  audioPlayer.addEventListener('ended', () => {
+    currentTrack = (currentTrack + 1) % tracks.length;
+    loadTrack(currentTrack);
+  });
+</script>
+
+
 
 </body>
 </html>

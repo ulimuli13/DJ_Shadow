@@ -14,6 +14,7 @@ body{
     overflow-x: auto;
     overflow-y: hidden;
     scroll-behavior: smooth;
+
 }
 
 .layout{
@@ -121,78 +122,78 @@ a:active {
 
 
 .navigation{
-    border: 1px solid red;
+    border: 0px solid red;
     height: 100vh;
     width: 20vw;
+    
 }
-.thema{
+.samplin-button {
+  position: absolute;
+  left: 100vw;
+  bottom: 50vh;
+  display: flex;
+  align-items: center;
+  background-color: rgba(209, 188, 150, 0);
+  color: rgb(25, 81, 65);
+  font-size: 100px;
+    font-family: "Karantina", system-ui;
+    font-weight: 100;
+  text-decoration: none;
+  border-radius: 20px;
+  gap: 50px;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.samplin-button:hover {
     color: rgb(209, 188, 150);
-    font-size: 100px;
-
+  cursor: pointer;
 }
 
-.leer1 {
-    height:250px;
+.samplin-button .arrow {
+  font-size: 200px;
+  transition: transform 0.3s ease;
+    transform: translate(0, -20px);
 }
 
-  .samplin:hover .pfeil_aussehen {
-    stroke: rgb(9, 58, 44);
-  }
-
-.samplin{
-    border: 1px solid red;
-display: flex;
-align-items: center;
-gap: 20px;
+.samplin-button:hover .arrow {
+  transform: translate(20px, -20px);
 }
 
-.samplin .Pfeil svg{
-    rotate: 90deg;
-    height: 70px;
-}
-.samplin:hover .thema{
-        color: rgb(9, 58, 44);        
-}
-
-
-  .leer {
-    height:150px;
-}
-
-  .about:hover .pfeil_aussehen {
-    stroke: rgb(9, 58, 44);
-  }
-
-.about{
-    border: 1px solid red;
-display: flex;
-align-items: center;
-gap: 20px;
+.about-button {
+  position: absolute;
+  left: 100vw;
+  bottom: 10vh;
+  display: flex;
+    flex-direction: column; /* ← Das ist neu! */
+  align-items: center;
+  background-color: rgba(209, 188, 150, 0);
+  color: rgb(25, 81, 65);
+  font-size: 100px;
+    font-family: "Karantina", system-ui;
+    font-weight: 100;
+  text-decoration: none;
+  border-radius: 20px;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+  z-index: 10;
 }
 
-.about .Pfeil svg{
-    rotate: 180deg;
-    height: 70px;
-}
-.about:hover .thema{
-        color: rgb(9, 58, 44);        
-}
-        .pfeil_aussehen {
-    fill: none;
-    stroke: #d1bc96;
-    stroke-miterlimit: 10;
-    stroke-width: 20px;
-  }
-
-.page {
-  transform: translateX(-100px);
-  opacity: 0;
-  animation: slideIn 0.8s ease-out forwards;
+.about-button:hover {
+    color: rgb(209, 188, 150);
+  cursor: pointer;
 }
 
-@keyframes slideIn {
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.about-button .arrow {
+  font-size: 200px;
+  rotate:90deg;
+  transition: transform 0.3s ease;
+  transform: translate(0, -20px);
+}
+
+.about-button:hover .arrow {
+
+  transform: translate(20px, -20px);
+
+
 }

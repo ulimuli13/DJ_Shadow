@@ -12,26 +12,14 @@ background-color: rgba(9, 58, 44, 0);
 
 height: 100px;
 width: 100vw;
+z-index: 1;
 
-    z-index: 1;
-
-}
-.Pfeil svg {
-    height: 50px;
-    position: absolute; /* oder fixed, wenn es immer sichtbar bleiben soll */
-    top: 20px; /* Abstand von oben */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
 }
 
 
-        .pfeil_aussehen {
-    fill: none;
-    stroke: #d1bc96;
-    stroke-miterlimit: 10;
-    stroke-width: 20px;
-  }
+
+
+
 /*Schallplatten*/
 
 .titel{
@@ -93,11 +81,11 @@ width: 100vw;
 
     .sticker{
         position: absolute;
-        height: 300px;
+        height: 200px;
         width: auto;
-        top: 500px;
+        top: 550px;
         opacity: 0.5;
-        rotate: -40deg;
+        rotate: -20deg;
         left:300px;
            z-index: -1;
         
@@ -168,4 +156,68 @@ width: 100vw;
 .Bild_unten_links img{
     height: auto;
     width: 100%;
+}
+/* Back Button */
+.back-button {
+  position: fixed; /* Fixed, damit er immer oben bleibt */
+  top: 10px; /* Abstand vom oberen Rand */
+  left: 50%; /* Abstand vom linken Rand */
+    color: rgb(209, 188, 150);
+  text-decoration: none;
+  z-index: 100; /* Damit der Pfeil immer sichtbar ist */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button .arrow {
+  font-size: 200px; /* Anpassen der Pfeilgröße */
+  rotate:-90deg;
+    font-family: karantina;
+  transition: transform 0.3s ease;
+  transform: translate(20px,0); /* Ein wenig nach oben verschoben */
+}
+
+.back-button:hover .arrow {
+  transform: translate(30px,0); /* Pfeil beim Hover nach oben bewegen */
+  cursor: pointer;
+}
+
+.musik_player {
+  position: fixed;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  z-index: 10;
+}
+
+.player-button {
+  background: none;
+  border: none;
+  font-size: 70px;
+  color: rgb(209, 188, 150);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.player-button:hover {
+  transform: scale(1.2);
+}
+
+.playmusic {
+  position: absolute;
+  top: 0px;
+  left: 25%;
+  transform: translateX(-50%);
+  font-family: "Karantina", system-ui;
+  font-size: 300px;
+  font-weight: 100;
+color: rgb(25, 81, 65);
+  z-index: -1; /* Hinter dem Musikplayer (z.B. 10), aber über Bild_oben_links (z-index -2) */
+  pointer-events: none; /* verhindert, dass es Klicks blockiert */
 }
