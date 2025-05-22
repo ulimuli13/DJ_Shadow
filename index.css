@@ -82,7 +82,7 @@ body{
     object-fit: cover;
 }
 
-.Streiffen{
+.Streifen{
     position: absolute;
     height: 120%;;
     top: -5px;
@@ -109,6 +109,17 @@ body{
 
 /*Navigation*/
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited,
+a:active {
+  color: inherit;
+}
+
+
 .navigation{
     border: 1px solid red;
     height: 100vh;
@@ -121,10 +132,9 @@ body{
 }
 
 .leer1 {
-    height:600px;
+    height:250px;
 }
 
-  
   .samplin:hover .pfeil_aussehen {
     stroke: rgb(9, 58, 44);
   }
@@ -140,34 +150,49 @@ gap: 20px;
     rotate: 90deg;
     height: 70px;
 }
-.samplin:hover{
-        color: rgb(9, 58, 44);
-}
-.leer {
-    height: 400px;
+.samplin:hover .thema{
+        color: rgb(9, 58, 44);        
 }
 
-.about{    border: 1px solid rgb(60, 0, 255);
+
+  .leer {
+    height:150px;
+}
+
+  .about:hover .pfeil_aussehen {
+    stroke: rgb(9, 58, 44);
+  }
+
+.about{
+    border: 1px solid red;
 display: flex;
 align-items: center;
-gap: px;
-
+gap: 20px;
 }
 
-.about .Pfeil{
+.about .Pfeil svg{
     rotate: 180deg;
-    width: 120px;
+    height: 70px;
 }
-.about:hover .thema {
-    color: rgb(9, 58, 44);
-  }
-  
-  .about:hover .pfeil_aussehen {
-    color: rgb(9, 58, 44);
-  }
-  .pfeil_aussehen {
+.about:hover .thema{
+        color: rgb(9, 58, 44);        
+}
+        .pfeil_aussehen {
     fill: none;
     stroke: #d1bc96;
     stroke-miterlimit: 10;
     stroke-width: 20px;
   }
+
+.page {
+  transform: translateX(-100px);
+  opacity: 0;
+  animation: slideIn 0.8s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

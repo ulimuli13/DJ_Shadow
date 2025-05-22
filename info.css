@@ -79,8 +79,8 @@ width: 100vw;
         top: 500px;
         opacity: 0.5;
         rotate: -40deg;
-        left:450px;
-           z-index: 0;
+        left:300px;
+           z-index: -1;
         
 
     }
