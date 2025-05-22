@@ -8,11 +8,30 @@ body{
 
 /*Playbereich*/
 .musik_player{
-background-color: rgb(9, 58, 44);
+background-color: rgba(9, 58, 44, 0);
+
 height: 100px;
 width: 100vw;
+
+    z-index: 1;
+
+}
+.Pfeil svg {
+    height: 50px;
+    position: absolute; /* oder fixed, wenn es immer sichtbar bleiben soll */
+    top: 20px; /* Abstand von oben */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
 }
 
+
+        .pfeil_aussehen {
+    fill: none;
+    stroke: #d1bc96;
+    stroke-miterlimit: 10;
+    stroke-width: 20px;
+  }
 /*Schallplatten*/
 
 .titel{
@@ -108,11 +127,13 @@ width: 100vw;
 
 
 /*Hintergund*/
-.Bild_oben_links{
+.Bild_oben_links {
+   position: absolute;
    height: 62vh; 
    width: 60vw;
-   z-index: -1;
+   z-index: -2;
 }
+
 
 .Bild_oben_links img{
     height: 100%;
