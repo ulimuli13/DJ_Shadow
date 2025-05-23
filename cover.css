@@ -93,10 +93,8 @@ body {
 
 .ausgewählt {
   position:relative;
-  
   flex: 1;
   box-sizing: border-box;
-  overflow: auto;
   display: flex;
   flex-direction: column ;
   justify-content: space-between;
@@ -104,7 +102,7 @@ body {
   overflow: hidden;
 }
 
-.Plattenspieler{
+.Player{
   position: relative;
   height: calc(100vh / 4);
   aspect-ratio: 1239 / 961;
@@ -117,13 +115,13 @@ body {
   height: 100%;
   background-color: black;
   opacity: 0;
-  z-index: 2;
+  z-index: 32;
 }
 
 .Platte:hover{height: 80%;}
 #X:hover{width: 12%;}
-.Plattenspieler:hover .interaktion{opacity: 0.6;}
-.Plattenspieler:hover .st0{opacity: 1;}
+.Player:hover .interaktion{opacity: 0.6;}
+.Player:hover .st0{opacity: 1;}
 
 .Platte{
   position: absolute;
@@ -134,14 +132,21 @@ body {
   height: 75%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  opacity: 1;
-  z-index: 15;
+  opacity: 0.5;
+  z-index: 33;
 }
 
-.Platte_off{
+
+.Plattenspieler, .Hebel{
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
+
+.Plattenspieler{z-index: 30;}
+.Hebel{z-index: 35; pointer-events:none;}
 
 .Platte_on{
   display: none;
@@ -165,7 +170,7 @@ body {
   top: 25px;
   left: 25px;
   transform: translate(-50%, -50%);
-  z-index: 11;
+  z-index: 33;
   width: 10%;
   aspect-ratio: 1/1;
 }

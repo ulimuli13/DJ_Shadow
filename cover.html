@@ -95,7 +95,7 @@
           <div class="ausgewählt">
             <div class="Kabelsalat"></div>
             <div>
-            <div class="Plattenspieler">
+            <div class="Player">
                <svg id="X" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1098.85 1080">
                   <line class="st0" x1="-1.38" y1="1081.38" x2="1096.69" y2="-1.31"/>
                   <line class="st0" x1="1096.69" y1="1081.38" x2="-1.38" y2="-1.31"/>
@@ -103,10 +103,11 @@
                <div class="Platte">
                <div class="glow"></div></div>
                <div class="interaktion"></div>
-              <img class="Platte_off" src="Bilder/Plattenspieler off.png">
+              <img class="Hebel" src="Bilder/Hebel_off.png">
+              <img class="Plattenspieler" src="Bilder/Plattenspieler.png">
             </div>
             
-            <div class="Plattenspieler">
+            <div class="Player">
                <svg id="X" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1098.85 1080">
                   <line class="st0" x1="-1.38" y1="1081.38" x2="1096.69" y2="-1.31"/>
                   <line class="st0" x1="1096.69" y1="1081.38" x2="-1.38" y2="-1.31"/>
@@ -114,10 +115,11 @@
                <div class="Platte">
                <div class="glow"></div></div>
                <div class="interaktion"></div>
-               <img class="Platte_off" src="Bilder/Plattenspieler off.png">
+               <img class="Hebel" src="Bilder/Hebel_off.png">
+               <img class="Plattenspieler" src="Bilder/Plattenspieler.png">
                
             </div>
-            <div class="Plattenspieler">
+            <div class="Player">
                <svg id="X" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1098.85 1080">
                   <line class="st0" x1="-1.38" y1="1081.38" x2="1096.69" y2="-1.31"/>
                   <line class="st0" x1="1096.69" y1="1081.38" x2="-1.38" y2="-1.31"/>
@@ -125,10 +127,11 @@
                <div class="Platte">
                <div class="glow"></div></div>
                <div class="interaktion"></div>
-               <img class="Platte_off" src="Bilder/Plattenspieler off.png">
+               <img class="Hebel" src="Bilder/Hebel_off.png">
+               <img class="Plattenspieler" src="Bilder/Plattenspieler.png">
               
             </div>
-            <div class="Plattenspieler">
+            <div class="Player">
                <svg id="X" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1098.85 1080">
                   <line class="st0" x1="-1.38" y1="1081.38" x2="1096.69" y2="-1.31"/>
                   <line class="st0" x1="1096.69" y1="1081.38" x2="-1.38" y2="-1.31"/>
@@ -136,7 +139,8 @@
                <div class="Platte">
                <div class="glow"></div></div>
                <div class="interaktion"></div>
-               <img class="Platte_off" src="Bilder/Plattenspieler off.png">
+               <img class="Hebel" src="Bilder/Hebel_off.png">
+               <img class="Plattenspieler" src="Bilder/Plattenspieler.png">
             </div>
             
          </div>
@@ -211,6 +215,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }, { passive: true }); // `true` ist okay, da kein preventDefault nötig ist
 });
 
+
+/*Bild austauschen Platte on Platte of bei Klick*/
+document.querySelectorAll(".Platte").forEach(platte => {
+  platte.addEventListener("click", () => {
+    const parent = platte.closest(".Player");
+    const hebel = parent.querySelector(".Hebel");
+
+    if (hebel.src.includes("Hebel_off.png")) {
+      hebel.src = "Bilder/Hebel_on.png";
+    } else {
+      hebel.src = "Bilder/Hebel_off.png";
+    }
+  });
+});
       </script>
       
 
