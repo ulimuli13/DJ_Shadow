@@ -1,0 +1,192 @@
+
+:root {
+  --transition-speed: .75s;
+  --spine-width: 20px;
+  --album-width: 100vh;
+  --album-height: 100vh;
+}
+
+body {
+  background-color: rgb(25, 81, 65);
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+  font-family: "Karantina", system-ui;
+  font-weight: 100;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  
+}
+
+/* durchblättern */
+.vinyl-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: calc(17 * var(--spine-width) + var(--album-width));
+  overflow-x: auto;
+  white-space: nowrap;
+  flex-shrink: 0;
+  height: var(--album-height);
+}
+
+.vinyl-hintergund{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('Bilder/Holz.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.vinyl-item {
+  display: flex;
+  overflow: hidden;
+  transition: width var(--transition-speed) ease-in-out;
+  cursor: pointer;
+}
+
+.vinyl-spine {
+  min-width: var(--spine-width);
+  height: 100%;
+  object-fit: cover;
+}
+
+.vinyl-cover {
+  width: var(--spine-width);
+  height: 100%;
+  object-fit: cover;
+  transition: width var(--transition-speed) ease-in-out;
+}
+
+.vinyl-item.active {
+  width: var(--album-width);
+}
+
+.vinyl-item:not(.active) {
+  width: var(--spine-width);
+}
+
+.vinyl-item.active .vinyl-cover {
+  width: calc(var(--album-width) );
+}
+
+/* Optional hover effect */
+.vinyl-item:not(.active):hover {
+  opacity: 0.8;
+  /* width: calc(var(--spine-width) + 2px); */
+}
+
+
+/* Ausgewählt */
+
+.ausgewählt {
+  position:relative;
+  flex: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column ;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.Player{
+  position: relative;
+  height: calc(100vh / 4);
+  aspect-ratio: 1239 / 961;
+
+}
+
+.interaktion{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  z-index: 32;
+}
+
+.Platte:hover{height: 80%;}
+#X:hover{width: 12%;}
+.Player:hover .interaktion{opacity: 0.6;}
+.Player:hover .st0{opacity: 1;}
+
+.Platte{
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  height: 75%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  opacity: 0.5;
+  z-index: 33;
+}
+
+
+.Plattenspieler, .Hebel{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.Plattenspieler{z-index: 30;}
+.Hebel{z-index: 35; pointer-events:none;}
+
+.Platte_on{
+  display: none;
+}
+
+.Kabelsalat{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 100%;
+  background-image: url('Bilder/Kabel.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+#X{
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  transform: translate(-50%, -50%);
+  z-index: 33;
+  width: 10%;
+  aspect-ratio: 1/1;
+}
+.st0 {
+  fill: none;
+  stroke: rgb(209, 188, 150);
+  stroke-miterlimit: 10;
+  stroke-width: 150px;
+  opacity: 0;
+}
+
+
+/* Navigation */
+
+.back{
+  background-color: rgb(25, 81, 65);
+  height: 100%;
+  width: 50px;
+}

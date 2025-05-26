@@ -1,0 +1,247 @@
+
+body{
+    background-color: rgb(25, 81, 65);
+    margin: 0;
+    padding: 0; 
+    overflow: hidden;
+}
+
+/*Playbereich*/
+.musik_player{
+background-color: rgba(9, 58, 44, 0);
+height: 100px;
+width: 100vw;
+z-index: 1;
+}
+
+
+/*Schallplatten*/
+
+.titel{
+    font-family: "Karantina", system-ui;
+    font-size: 60px;
+    font-weight: 350;
+    color: rgb(209, 188, 150);
+}
+
+.abstand {
+    height: 20px;
+}
+
+.text{
+    font-family: "Bebas Neue", system-ui;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 300;
+    color: rgb(209, 188, 150);
+}
+
+.info_platte{
+    height: 575px;
+    width: 575px;
+    animation: rotateInfinitely 1.3s linear infinite; /* Dauer: 6 Sekunden, linear, unendlich */
+  transition: transform 0.5s ease; /* sanfte Rückdrehung beim Hover */
+}
+
+.info_platte img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+    .info_platte{
+        position: relative;
+    }
+
+    .joshua_paul{
+        position: absolute;
+        right: 2vw;
+        top: 5vw;
+    }
+
+    .enterducing{
+        position: absolute;
+        right: 36vw;
+        bottom: -3vh;
+    }
+
+    .controversial{
+        position: absolute;
+        left: 3vw;
+        top: 25vh;
+    }
+
+ .inhalt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* exakt zentriert */
+  text-align: center;
+  width: 80%; /* optional: begrenzt die Breite, damit es schöner aussieht */
+}
+
+
+    .sticker{
+        position: absolute;
+        height: 250px;
+        width: auto;
+        top: 350px;
+        rotate: -10deg;
+        left:500px;
+           z-index: -1;
+        
+
+    }
+
+    .sticker img{
+        height: 100%;
+        width: auto;
+    
+    }
+
+    /*Animation der platten */
+    @keyframes rotateInfinitely {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .info_platte:hover {
+        animation: none;              /* Stoppt die Rotation */
+        transform: rotate(0deg);      /* Setzt zurück auf 0 Grad */
+      }
+
+
+/*Hintergund*/
+.Bild_oben_links {
+   position: absolute;
+   height: 62vh; 
+   width: 60vw;
+   left:40vw;
+   z-index: -2;
+}
+
+
+.Bild_oben_links img{
+    height: 100%;
+    width: 100%;
+    
+}
+    
+.Bild_rechts{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 60vh;
+    width: auto;
+    z-index: -1;
+}
+
+.Bild_rechts img{
+    width: auto;
+    height: 100%;
+}
+
+.Bild_unten_links{
+    position: absolute;
+top:50vh;
+
+    width: 35vw;
+    height: auto;
+    z-index: -1;
+    
+}
+
+.Bild_unten_links img{
+    height: auto;
+    width: 100%;
+}
+/* Back Button */
+.back-button {
+  position: absolute; /* Fixed, damit er immer oben bleibt */
+  top: -15px; /* Abstand vom oberen Rand */
+  left: 3%; /* Abstand vom linken Rand */
+    color: rgb(209, 188, 150);
+  text-decoration: none;
+  z-index: 100; /* Damit der Pfeil immer sichtbar ist */
+  display: flex;
+
+}
+
+.back-button .arrow {
+  font-size: 150px; /* Anpassen der Pfeilgröße */
+  rotate:-90deg;
+    font-family: karantina;
+  transition: transform 0.3s ease;
+  transform: translate(20px,0); /* Ein wenig nach oben verschoben */
+}
+
+.back-button:hover .arrow {
+  transform: translate(30px,0); /* Pfeil beim Hover nach oben bewegen */
+  cursor: pointer;
+}
+
+.musik_player {
+  position: fixed;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  z-index: 10;
+}
+
+.player-button {
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: rgb(209, 188, 150);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.player-button:hover {
+  transform: scale(1.2);
+}
+
+.playmusic {
+  position: absolute;
+  top: 0px;
+  left: 5%;
+
+  font-family: "Karantina", system-ui;
+  font-size: 750px;
+  font-weight: 100;
+    color: rgb(9, 58, 44);
+  z-index: -2; /* Hinter dem Musikplayer (z.B. 10), aber über Bild_oben_links (z-index -2) */
+  pointer-events: none; /* verhindert, dass es Klicks blockiert */
+}
+
+.playmusic_2 {
+  position: absolute;
+  top: 500px;
+  left: 1100px;
+  font-family: "Karantina", system-ui;
+  font-size: 750px;
+  font-weight: 100;
+    color: rgb(9, 58, 44);
+  z-index: -2; /* Hinter dem Musikplayer (z.B. 10), aber über Bild_oben_links (z-index -2) */
+  pointer-events: none; /* verhindert, dass es Klicks blockiert */
+}
+
+.balken
+{
+  position: absolute;
+  top: -15px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+    background-color:rgb(9, 58, 44);
+  z-index: -1; /* Hinter dem Musikplayer */
+}
