@@ -214,11 +214,10 @@ top:50vh;
   position: absolute;
   top: 0px;
   left: 5%;
-
   font-family: "Karantina", system-ui;
-  font-size: 750px;
+  font-size: 50vh;
   font-weight: 100;
-    color: rgb(9, 58, 44);
+  color: rgb(9, 58, 44);
   z-index: -2; /* Hinter dem Musikplayer (z.B. 10), aber über Bild_oben_links (z-index -2) */
   pointer-events: none; /* verhindert, dass es Klicks blockiert */
 }
