@@ -85,9 +85,9 @@ z-index: 1;
         position: absolute;
         height: 250px;
         width: auto;
-        top: 350px;
+        top: 35vh;
         rotate: -10deg;
-        left:500px;
+        left: 25vw;
            z-index: -1;
         
 
@@ -212,10 +212,10 @@ top:50vh;
 
 .playmusic {
   position: absolute;
-  top: 0px;
+  top: 5vh;
   left: 5%;
   font-family: "Karantina", system-ui;
-  font-size: 50vh;
+  font-size: 60vh;
   font-weight: 100;
   color: rgb(9, 58, 44);
   z-index: -2; /* Hinter dem Musikplayer (z.B. 10), aber über Bild_oben_links (z-index -2) */
@@ -225,9 +225,9 @@ top:50vh;
 .playmusic_2 {
   position: absolute;
   top: 500px;
-  left: 1100px;
+  left: 60vw;
   font-family: "Karantina", system-ui;
-  font-size: 50vh;
+  font-size: 60vh;
   font-weight: 100;
     color: rgb(9, 58, 44);
   z-index: -2; /* Hinter dem Musikplayer (z.B. 10), aber über Bild_oben_links (z-index -2) */
