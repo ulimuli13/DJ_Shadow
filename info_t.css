@@ -31,14 +31,14 @@ z-index: 1;
 .text{
     font-family: "Bebas Neue", system-ui;
     text-transform: uppercase;
-    font-size: 25px;
+    font-size: 2vh;
     font-weight: 300;
     color: rgb(209, 188, 150);
 }
 
 .info_platte{
-    height: 575px;
-    width: 575px;
+    height: 50vh;
+    width: 50vh;
     animation: rotateInfinitely 1.3s linear infinite; /* Dauer: 6 Sekunden, linear, unendlich */
   transition: transform 0.5s ease; /* sanfte Rückdrehung beim Hover */
 }
@@ -228,7 +228,7 @@ top:50vh;
   top: 500px;
   left: 1100px;
   font-family: "Karantina", system-ui;
-  font-size: 750px;
+  font-size: 50vh;
   font-weight: 100;
     color: rgb(9, 58, 44);
   z-index: -2; /* Hinter dem Musikplayer (z.B. 10), aber über Bild_oben_links (z-index -2) */
