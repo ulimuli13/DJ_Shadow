@@ -9,15 +9,10 @@ body{
 /*Playbereich*/
 .musik_player{
 background-color: rgba(9, 58, 44, 0);
-
 height: 100px;
 width: 100vw;
 z-index: 1;
-
 }
-
-
-
 
 
 /*Schallplatten*/
@@ -25,20 +20,25 @@ z-index: 1;
 .titel{
     font-family: "Karantina", system-ui;
     font-size: 60px;
-    font-weight: 100;
+    font-weight: 350;
     color: rgb(209, 188, 150);
+}
+
+.abstand {
+    height: 20px;
 }
 
 .text{
     font-family: "Bebas Neue", system-ui;
-    font-size: 25px;
-    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 2vh;
+    font-weight: 300;
     color: rgb(209, 188, 150);
 }
 
 .info_platte{
-    height: 470px;
-    width: 470px;
+    height: 50vh;
+    width: 50vh;
     animation: rotateInfinitely 1.3s linear infinite; /* Dauer: 6 Sekunden, linear, unendlich */
   transition: transform 0.5s ease; /* sanfte Rückdrehung beim Hover */
 }
@@ -61,32 +61,33 @@ z-index: 1;
 
     .enterducing{
         position: absolute;
-        right: 29vw;
-        bottom: -5vh;
+        right: 36vw;
+        bottom: -3vh;
     }
 
     .controversial{
         position: absolute;
-        left: 5vw;
+        left: 3vw;
         top: 25vh;
     }
 
-    .inhalt{
-    position: absolute;
-    top: 80px;
-    left: 20px;
-    text-align: center;
+ .inhalt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* exakt zentriert */
+  text-align: center;
+  width: 80%; /* optional: begrenzt die Breite, damit es schöner aussieht */
+}
 
-    }
 
     .sticker{
         position: absolute;
-        height: 200px;
+        height: 250px;
         width: auto;
-        top: 550px;
-        opacity: 0.5;
-        rotate: -20deg;
-        left:300px;
+        top: 350px;
+        rotate: -10deg;
+        left:500px;
            z-index: -1;
         
 
@@ -119,6 +120,7 @@ z-index: 1;
    position: absolute;
    height: 62vh; 
    width: 60vw;
+   left:40vw;
    z-index: -2;
 }
 
@@ -145,8 +147,8 @@ z-index: 1;
 
 .Bild_unten_links{
     position: absolute;
-    top: calc(60px + 67vh);
-    left: 8vw;
+top:50vh;
+
     width: 35vw;
     height: auto;
     z-index: -1;
@@ -159,19 +161,18 @@ z-index: 1;
 }
 /* Back Button */
 .back-button {
-  position: fixed; /* Fixed, damit er immer oben bleibt */
-  top: 10px; /* Abstand vom oberen Rand */
-  left: 50%; /* Abstand vom linken Rand */
+  position: absolute; /* Fixed, damit er immer oben bleibt */
+  top: -15px; /* Abstand vom oberen Rand */
+  left: 3%; /* Abstand vom linken Rand */
     color: rgb(209, 188, 150);
   text-decoration: none;
   z-index: 100; /* Damit der Pfeil immer sichtbar ist */
   display: flex;
-  align-items: center;
-  justify-content: center;
+
 }
 
 .back-button .arrow {
-  font-size: 200px; /* Anpassen der Pfeilgröße */
+  font-size: 150px; /* Anpassen der Pfeilgröße */
   rotate:-90deg;
     font-family: karantina;
   transition: transform 0.3s ease;
@@ -185,7 +186,7 @@ z-index: 1;
 
 .musik_player {
   position: fixed;
-  top: 300px;
+  top: -10px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -199,7 +200,7 @@ z-index: 1;
 .player-button {
   background: none;
   border: none;
-  font-size: 70px;
+  font-size: 40px;
   color: rgb(209, 188, 150);
   cursor: pointer;
   transition: transform 0.2s;
@@ -212,12 +213,35 @@ z-index: 1;
 .playmusic {
   position: absolute;
   top: 0px;
-  left: 25%;
-  transform: translateX(-50%);
+  left: 5%;
+
   font-family: "Karantina", system-ui;
-  font-size: 300px;
+  font-size: 750px;
   font-weight: 100;
-color: rgb(25, 81, 65);
-  z-index: -1; /* Hinter dem Musikplayer (z.B. 10), aber über Bild_oben_links (z-index -2) */
+    color: rgb(9, 58, 44);
+  z-index: -2; /* Hinter dem Musikplayer (z.B. 10), aber über Bild_oben_links (z-index -2) */
   pointer-events: none; /* verhindert, dass es Klicks blockiert */
+}
+
+.playmusic_2 {
+  position: absolute;
+  top: 500px;
+  left: 1100px;
+  font-family: "Karantina", system-ui;
+  font-size: 50vh;
+  font-weight: 100;
+    color: rgb(9, 58, 44);
+  z-index: -2; /* Hinter dem Musikplayer (z.B. 10), aber über Bild_oben_links (z-index -2) */
+  pointer-events: none; /* verhindert, dass es Klicks blockiert */
+}
+
+.balken
+{
+  position: absolute;
+  top: -15px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+    background-color:rgb(9, 58, 44);
+  z-index: -1; /* Hinter dem Musikplayer */
 }
