@@ -57,6 +57,7 @@ body {
   cursor: pointer;
 }
 
+
 .vinyl-spine {
   min-width: var(--spine-width);
   height: 100%;
@@ -84,9 +85,12 @@ body {
 
 /* Optional hover effect */
 .vinyl-item:not(.active):hover {
-  opacity: 0.8;
+  opacity: 0.6;
   /* width: calc(var(--spine-width) + 2px); */
 }
+
+
+
 
 
 /* Ausgewählt */
@@ -118,24 +122,35 @@ body {
   z-index: 32;
 }
 
-.Platte:hover{height: 80%;}
-#X:hover{width: 12%;}
-.Player:hover .interaktion{opacity: 0.6;}
+.Platte_container:hover {height: 85%;}
+
+
+.delete-button:hover{width: 12%;}
+.Player:hover .interaktion{opacity: 0.2;}
 .Player:hover .st0{opacity: 1;}
 
-.Platte{
+.Platte_container{
   position: absolute;
   top: 50%;
   left: 40%;
   transform: translate(-50%, -50%);
-  background-color: red;
   height: 75%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  opacity: 0.5;
   z-index: 33;
+  background-size: cover;
+  background-position: center;
 }
 
+.Platte_drehung{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  animation: rotate 2s linear infinite;
+  animation-play-state: paused;
+}
 
 .Plattenspieler, .Hebel{
   width: 100%;
@@ -165,7 +180,7 @@ body {
   z-index: -1;
 }
 
-#X{
+.delete-button{
   position: absolute;
   top: 25px;
   left: 25px;
@@ -181,6 +196,22 @@ body {
   stroke-width: 150px;
   opacity: 0;
 }
+
+@keyframes rotate {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.Platte_drehung.rotating {
+  animation: rotate 1.2s linear infinite;
+  animation-play-state: running;
+
+}
+.Platte_drehung:not(.rotating) {
+  animation-play-state: paused;
+  transform: rotate(0deg);
+}
+
 
 
 /* Navigation */
