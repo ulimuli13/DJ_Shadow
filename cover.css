@@ -104,6 +104,7 @@ body {
   justify-content: space-between;
   height: 100vh;
   overflow: hidden;
+
 }
 
 .Player{
@@ -126,8 +127,13 @@ body {
 
 
 .delete-button:hover{width: 12%;}
-.Player:hover .interaktion{opacity: 0.2;}
-.Player:hover .st0{opacity: 1;}
+.Player:hover .interaktion{
+  opacity: 0.2;
+}
+.Player:hover .st0{
+  opacity: 1;
+
+}
 
 .Platte_container{
   position: absolute;
@@ -140,6 +146,7 @@ body {
   z-index: 33;
   background-size: cover;
   background-position: center;
+    cursor: pointer;
 }
 
 .Platte_drehung{
@@ -165,6 +172,7 @@ body {
 
 .Platte_on{
   display: none;
+
 }
 
 .Kabelsalat{
@@ -188,6 +196,7 @@ body {
   z-index: 33;
   width: 10%;
   aspect-ratio: 1/1;
+    cursor: pointer;
 }
 .st0 {
   fill: none;

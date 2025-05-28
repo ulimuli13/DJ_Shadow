@@ -166,8 +166,8 @@ a:active {
   align-items: center;
   color: rgb(9, 58, 44);
   font-size: 100px;
-    font-family: "Karantina", system-ui;
-    font-weight: 100;
+  font-family: "neohead", system-ui;
+  font-weight: thin;
   text-decoration: none;
   gap: 5px;
   z-index: 10;
