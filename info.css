@@ -161,7 +161,7 @@ z-index: 1;
 /* Back Button */
 .back-button {
   position: absolute; /* Fixed, damit er immer oben bleibt */
-  top: -15px; /* Abstand vom oberen Rand */
+  top: 0px; /* Abstand vom oberen Rand */
   left: 3%; /* Abstand vom linken Rand */
     color: rgb(209, 188, 150);
   text-decoration: none;
@@ -171,9 +171,10 @@ z-index: 1;
 }
 
 .back-button .arrow {
-  font-size: 150px; /* Anpassen der Pfeilgröße */
+  font-size: 100px; /* Anpassen der Pfeilgröße */
+    font-weight: 100;
   rotate:-90deg;
-    font-family: karantina;
+  font-family: "neohead", system-ui;
   transition: transform 0.3s ease;
   transform: translate(20px,0); /* Ein wenig nach oben verschoben */
 }
