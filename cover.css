@@ -233,9 +233,9 @@ body {
 /* Back Button */
 .back-button {
   position: absolute; /* Fixed, damit er immer oben bleibt */
-  top: 50vh; /* Abstand vom oberen Rand */
+  top: 43vh; /* Abstand vom oberen Rand */
   left: 2vw; /* Abstand vom linken Rand */
-    color: rgb(209, 188, 150);
+    color: #d1bc96;
   text-decoration: none;
   z-index: 100; /* Damit der Pfeil immer sichtbar ist */
   display: flex;
@@ -243,9 +243,9 @@ body {
 }
 
 .back-button .arrow {
-  font-size: 150px; /* Anpassen der Pfeilgröße */
+  font-size: 200px; /* Anpassen der Pfeilgröße */
   rotate:180deg;
-    font-family: karantina;
+    font-family: "neohead", system-ui;
   transition: transform 0.3s ease;
   transform: translate(20px,0); /* Ein wenig nach oben verschoben */
 }
@@ -253,4 +253,9 @@ body {
 .back-button:hover .arrow {
   transform: translate(30px,0); /* Pfeil beim Hover nach oben bewegen */
   cursor: pointer;
+}
+
+.arrow {
+  font-family: "neohead", system-ui;
+  font-weight: 100;
 }

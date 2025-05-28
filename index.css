@@ -128,16 +128,17 @@ a:active {
     
 }
 .samplin-button {
+  /*border: 1px red solid;*/
   position: absolute;
   left: 100vw;
-  bottom: 50vh;
+  bottom: 44vh;
   display: flex;
   text-decoration: none;
   align-items: center;
   color: rgb(9, 58, 44);
   font-size: 100px;
-    font-family: "Karantina", system-ui;
-    font-weight: 100;
+  font-family: "Karantina", system-ui;
+  font-weight: 100;
   gap: 50px;
   z-index: 10;
 }
@@ -157,16 +158,16 @@ a:active {
   transform: translate(20px, -20px);
 }
 
-.about-button {
+/*.about-button {
   position: absolute;
   left: 100vw;
   bottom: 10vh;
   display: flex;
-    flex-direction: column; /* ← Das ist neu! */
+    flex-direction: column;  
   align-items: center;
   color: rgb(9, 58, 44);
   font-size: 100px;
-  font-family: "neohead", system-ui;
+  font-family: Karantina, system-ui;
   font-weight: thin;
   text-decoration: none;
   gap: 5px;
@@ -190,4 +191,10 @@ a:active {
   transform: translate(20px, -20px);
 
 
+}
+*/
+
+.arrow {
+  font-family: "neohead", system-ui;
+  font-weight: 100;
 }
