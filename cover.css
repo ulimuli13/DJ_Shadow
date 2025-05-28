@@ -123,17 +123,7 @@ body {
   z-index: 32;
 }
 
-.Platte_container:hover {height: 85%;}
 
-
-.delete-button:hover{width: 12%;}
-.Player:hover .interaktion{
-  opacity: 0.2;
-}
-.Player:hover .st0{
-  opacity: 1;
-
-}
 
 .Platte_container{
   position: absolute;
@@ -147,6 +137,9 @@ body {
   background-size: cover;
   background-position: center;
     cursor: pointer;
+    transition: transform 0.08s ease;
+    
+    
 }
 
 .Platte_drehung{
@@ -157,6 +150,7 @@ body {
   background-position: center;
   animation: rotate 2s linear infinite;
   animation-play-state: paused;
+  
 }
 
 .Plattenspieler, .Hebel{
@@ -197,6 +191,8 @@ body {
   width: 10%;
   aspect-ratio: 1/1;
     cursor: pointer;
+    transition: transform 0.3s ease;
+    transform-origin: center center;
 }
 .st0 {
   fill: none;
@@ -213,12 +209,28 @@ body {
 
 .Platte_drehung.rotating {
   animation: rotate 1.2s linear infinite;
-  animation-play-state: running;
+  
 
 }
 .Platte_drehung:not(.rotating) {
   animation-play-state: paused;
   transform: rotate(0deg);
+}
+.Platte_container:hover {
+  transform: translate(-50%, -50%) scale(1.1);}
+
+
+.delete-button:hover{
+  transform: scale(1.2);
+  animation-play-state: running;
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+.Player:hover .interaktion{
+  opacity: 0.2;
+}
+.Player:hover .st0{
+  opacity: 1;
 }
 
 
@@ -232,22 +244,27 @@ body {
 /* Back Button */
 .back-button {
   position: absolute;
-  top: -1vh;
-  left: 2vw;
+  top: 1.5vh;
+  left: 0.5vw;
     color: #D1BC96;
   text-decoration: none;
   z-index: 100;
   display: flex;
+  
 }
 .back-button .arrow {
   font-size: 100px;
   rotate:180deg;
+  padding-bottom: 20px;
+  line-height:30px ;
+  overflow: hidden;
     font-family: "neohead", system-ui;
   transition: transform 0.3s ease;
-  transform: translate(20px,0);
+
+  
 }
 .back-button:hover .arrow {
-  transform: translate(30px,0);
+  transform: scale(1.15);
   cursor: pointer;
 }
 .arrow {
@@ -255,9 +272,9 @@ body {
   font-weight: 100;
 }
 .about-button {
-  border: 1px solid red;
+  
   position: absolute;
-  left: 0vw;
+  left: -1.4vw;
   bottom: 5vh;
   color: rgb(209, 188, 150);
   font-size: 5vh;
@@ -265,21 +282,20 @@ body {
   text-decoration: none;
   z-index: 100;
     rotate:-90deg;
+    transition: transform 0.3s ease;
 }
 .about-button:hover {
     color: rgb(209, 188, 150);
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.15);
+  
 }
 .about-button .arrow {
   font-size: 100px;
   rotate:-90deg;
   transition: transform 0.3s ease;
-  transform: translate(0, -20px);
 }
-.about-button:hover .arrow {
-  transform: translate(10px, -20px);
-}
+
 
 
 
