@@ -1,5 +1,5 @@
 window.addEventListener('wheel', function(e) {
-    if (e.deltaY !== 0) {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
       e.preventDefault();
       window.scrollBy({
         left: e.deltaY,
@@ -7,3 +7,4 @@ window.addEventListener('wheel', function(e) {
       });
     }
   }, { passive: false });
+  
